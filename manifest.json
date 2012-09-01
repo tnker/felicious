@@ -1,12 +1,15 @@
 ﻿{
+	"manifest_version": 1,
 	"name": "felicious",
 	"version": "0.2.3",
 	"description": "Browse your f***ing delicious bookmarks",
-	"background_page": "background.html",
+	"background": {
+		"page": "background.html"
+	},
 	"options_page": "options.html",
 	"browser_action": {
 		"default_icon": "images/icon_19.png",
-		"popup": "popup.html"
+		"default_popup": "popup.html"
 	},
 	"icons": {
 		"16": "images/icon_16.png",

@@ -5,21 +5,28 @@ Colors:
 	hover: #eeeeee
 */
 
-body{
+body
+{
 	margin: 0px;
-	font-family: Arial;
-	font-size: 14px;
+	font-family: 'メイリオ';
+	font-size: 12px;
 	overflow: hidden;
-	width: 300px;
+	width: 100%;
 	height: 1px;
 }
-
-.topbar{
+.topbar_wrap
+{
+	width: 100%;
+	background-color: #d2d2d2;
+}
+.topbar
+{
 	position: relative;
 }
 /*__Search Field__*/
-input#search{
-	font-size: 14px;
+input#search
+{
+	font-size: 12px;
 	height: 22px;
 	width: 274px;
 	background-image: url('images/search.png');
@@ -27,25 +34,28 @@ input#search{
 	background-repeat: no-repeat;
 	border: 1px solid #aaaaaa;
 	padding-left: 24px;
-	margin: 0 0 2px 0;
+	margin: 1px 0px 2px 10px;
 	z-index: 1;
 	-webkit-transition: color .1s linear;
+	-webkit-border-radius: 20px;
 }
-input#search:focus{
+input#search:focus
+{
 	outline: none;
 }
 
 /*tag button*/
-a#tag{
+a#tag
+{
 	position: absolute;
 	z-index: 999;
 	margin-top: 0px;
 	top: 0;
-	left: 279px;
+	left: 285px;
 	display: block;
 	overflow: hidden;
 	height: 0;
-	padding-top: 26px;
+	padding-top: 28px;
 	width: 16px;
 	background: url('images/tag.png') no-repeat center center;
 	opacity: .7;
@@ -66,23 +76,33 @@ a#tags_title{
 }
 
 /*__Heading__*/
-.heading{
+.heading
+{
 	position: relative;
 	line-height: 20px;
 	height: 20px;
-	padding: 0;
-	border-top: 1px solid #5394dc;
-	border-bottom: 1px solid #2556ad;
 	font-size: 12px;
 	color: #ffffff;
-	background-color: #3274d0;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3882d6), color-stop(1, #2c66ca));
+	padding: 0;
+	background-color: #d2d2d2;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+/* 	border-top: 1px solid #5394dc; */
+/* 	border-bottom: 1px solid #2556ad; */
+/* 	background-color: #3274d0; */
+/* 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3882d6), color-stop(1, #2c66ca)); */
 }
+
+.subheader {
+	-webkit-box-shadow: 0px -1px 1px rgba(0,0,0,0.4),0px 1px 1px rgba(0,0,0,0.4);
+}
+
 .heading h2,
-.heading ul.breadcrumbs{
+.heading ul.breadcrumbs
+{
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, .2);
 }
-.heading h2{
+.heading h2
+{
 	font-size: 12px;
 	margin: 0;
 	padding: 0 0 0 5px;
@@ -163,7 +183,7 @@ ul.breadcrumbs{
 	background-image: url("images/breadcrumbs_splitter.png");
 	background-position: -12px center;
 	background-repeat: no-repeat;
-	padding-left: 0px;
+	padding-left: 15px;
 	width: 100%;
 }
 ul.breadcrumbs:empty{
@@ -194,7 +214,7 @@ ul.breadcrumbs li a:hover{
 ul.tags,
 ul.posts{
 	position: relative;
-	height: 200px;
+	height: 240px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	list-style-type: none;
@@ -205,7 +225,7 @@ ul.posts{
 ul.tags li,
 ul.posts li{
 	-webkit-transition: all .3s ease-in-out, opacity .2s linear .1s;
-	height: 22px;
+	height: 25px;
 	position: relative;
 }
 ul li.hidden{
@@ -221,8 +241,9 @@ ul li.hidden{
 ul.tags li a,
 ul.posts li a{
 	display: block;
-	height: 16px;
-	line-height: 16px;
+	height: 18px;
+	border-bottom:1px solid #f8f8f8;
+	line-height: 18px;
 	padding: 3px;
 	cursor: pointer;
 	color: #000000;
@@ -232,11 +253,18 @@ ul.posts li a{
 	text-overflow: ellipsis;
 }
 
+ul.tags li:nth-child(even),
+ul.posts li:nth-child(even)
+{
+/* 	background-color: #f7f7f7; */
+}
+
 ul.tags li:hover a,
 ul.posts li:hover a,
 ul.tags li.selected a,
 ul.posts li.selected a{
-	background-color: #eeeeee;
+/* 	background-color: #eeeeee; */
+	color: #1095e9;
 }
 
 ul.tags li a img,
@@ -374,14 +402,14 @@ ul.tags.cloud li:hover a .count{
 	/*
 	border-top: 1px solid #bd2e2e;
 	border-bottom: 1px solid #858585;
-	*/
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b5b5b5), color-stop(1, #9b9b9b));
-	-webkit-transition: all .6s ease-in-out;
-	list-style-type: none;
-	margin: 0 0 2px 0;
-	padding: 0;
-	height: 24px;
-	overflow: hidden;
+	 */
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b5b5b5), color-stop(1, #9b9b9b));
+-webkit-transition: all .6s ease-in-out;
+list-style-type: none;
+margin: 0;
+padding: 0;
+height: 24px;
+overflow: hidden;
 }
 #notifications li{
 	height: 22px;
@@ -392,7 +420,7 @@ ul.tags.cloud li:hover a .count{
 	background-color: #7cba0f;
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8ec411), color-stop(1, #6ab00d));
 	position: relative;
-	
+
 	color: rgba(0, 0, 0, .6);
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
 }
@@ -411,7 +439,7 @@ ul.tags.cloud li:hover a .count{
 	width: 16px;
 	height: 0;
 	padding-top: 22px;
-	
+
 	background-image: url('images/close.png');
 	background-repeat: no-repeat;
 	background-position: center center;
